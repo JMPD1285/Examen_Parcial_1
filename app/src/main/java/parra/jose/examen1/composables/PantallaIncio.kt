@@ -29,12 +29,14 @@ fun PantallaInicio(paddingValues: PaddingValues) {
     Column(
         modifier = Modifier.fillMaxSize().padding(paddingValues).padding(16.dp)
     ) {
+        //Titulo principal de la aplicación
         Text(
             text = "Kakarot Math", fontSize = 20.sp, fontWeight = FontWeight.Bold, modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center
         )
         Spacer(modifier = Modifier.height(20.dp))
 
+        //Seccion donde se muestra la información del usuario
         Row(
             modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically
         ) {
@@ -74,6 +76,7 @@ fun PantallaInicio(paddingValues: PaddingValues) {
         )
         Spacer(modifier = Modifier.height(12.dp))
 
+        //Card principal que muestra la actividad destacada "Numeros"
         Card(
             shape = RoundedCornerShape(20.dp),
             colors = CardDefaults.cardColors(containerColor = Color(0xFF8BC34A)
@@ -97,6 +100,7 @@ fun PantallaInicio(paddingValues: PaddingValues) {
                     )
                     Spacer(modifier = Modifier.height(12.dp))
 
+                    //Boton para iniciar la actividad
                     Button(onClick = {}) {
                         Icon(
                             imageVector = Icons.Filled.PlayArrow,
@@ -107,7 +111,7 @@ fun PantallaInicio(paddingValues: PaddingValues) {
                         Spacer(modifier = Modifier.width(6.dp))
                     }
                 }
-
+                //Imagen decorativa que acompaña la card
                 Image(
                     painter = painterResource(id = R.drawable.frog), contentDescription = "Rana",
                     modifier = Modifier.size(95.dp), contentScale = ContentScale.Crop
@@ -121,6 +125,7 @@ fun PantallaInicio(paddingValues: PaddingValues) {
         )
         Spacer(modifier = Modifier.height(16.dp))
 
+        //Se usa el componente CursoCard para mostrar los cursos disponibles
         CursoCard(
             titulo = "Prueba de 7 dias",
             fecha = "Comienza el 1ro de Agosto",
@@ -142,6 +147,7 @@ fun PantallaInicio(paddingValues: PaddingValues) {
     }
 }
 
+//Funcion reutilizable para mostrar las cards de los cursos
 @Composable
 fun CursoCard(
     titulo: String,

@@ -28,12 +28,14 @@ fun PantallaPerfil(paddingValues: PaddingValues) {
     Column(
         modifier = Modifier.fillMaxSize().padding(paddingValues).padding(16.dp)){
 
+        //Titulo principal
         Text(
             text = "Kakarot Math", fontSize = 20.sp, fontWeight = FontWeight.Bold, modifier = Modifier.fillMaxWidth(),
             textAlign = androidx.compose.ui.text.style.TextAlign.Center
         )
         Spacer(modifier = Modifier.height(20.dp))
 
+        //Sección con la información del perfil
         Column(
             modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally){
 
@@ -54,6 +56,7 @@ fun PantallaPerfil(paddingValues: PaddingValues) {
         }
         Spacer(modifier = Modifier.height(20.dp))
 
+        //Mensaje de advertencia
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -75,7 +78,7 @@ fun PantallaPerfil(paddingValues: PaddingValues) {
         )
         Spacer(modifier = Modifier.height(16.dp))
 
-
+        //Card que muestra el curso de Otoño en progreso
         Card(
             shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF9575CD)),
             modifier = Modifier.fillMaxWidth().height(130.dp)
@@ -97,6 +100,7 @@ fun PantallaPerfil(paddingValues: PaddingValues) {
                     )
                     Spacer(modifier = Modifier.height(8.dp))
 
+                    //Boton para continuar el curso
                     Button(onClick = {}) {
                         Icon(
                             imageVector = Icons.Filled.PlayArrow, contentDescription = "Play", modifier = Modifier.size(18.dp)
@@ -106,6 +110,7 @@ fun PantallaPerfil(paddingValues: PaddingValues) {
                     }
                 }
 
+                //Imagen decorativa del curso
                 Image(
                     painter = painterResource(id = R.drawable.giraffe), contentDescription = "Jirafa",
                     modifier = Modifier.size(80.dp), contentScale = ContentScale.Crop
@@ -114,6 +119,7 @@ fun PantallaPerfil(paddingValues: PaddingValues) {
         }
         Spacer(modifier = Modifier.height(12.dp))
 
+        //Card que muestra la prueba de 7 días en progreso
         Card(
             shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF4FC3F7)),
             modifier = Modifier.fillMaxWidth().height(130.dp)
@@ -133,6 +139,7 @@ fun PantallaPerfil(paddingValues: PaddingValues) {
                     )
                     Spacer(modifier = Modifier.height(8.dp))
 
+                    //Boton para continuar la actividad
                     Button(onClick = {}) {
                         Icon(
                             imageVector = Icons.Filled.PlayArrow, contentDescription = "Play",
@@ -143,6 +150,7 @@ fun PantallaPerfil(paddingValues: PaddingValues) {
                     }
                 }
 
+                //Imagen decorativa del curso
                 Image(
                     painter = painterResource(id = R.drawable.penguin),
                     contentDescription = "Pinguino",
